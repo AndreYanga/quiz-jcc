@@ -167,7 +167,9 @@ function showResults() {
     document.getElementById('quizScreen').style.display = 'none';
     document.getElementById('resultsScreen').style.display = 'block';
     document.getElementById('score').textContent = `Você acertou ${score} de ${quizData.length}`;
-    const feedback = score === quizData.length ? "Excelente! És um mestre na programação!" : "Precisas praticar mais um pouco!";
+    const feedback = score === quizData.length 
+    ? "Excelente! És um verdadeiro conhecedor das Escrituras Sagradas!" 
+    : "Não desanimes! Continua a estudar e a meditar na Palavra de Deus!";
     document.getElementById('feedback').textContent = feedback;
 
     // Exibe o botão de reiniciar após o quiz
