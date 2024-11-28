@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do JCC</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="tab-header">
+                <button class="tab-link active" onclick="openTab(event, 'login')">Entrar</button>
+                <button class="tab-link" onclick="openTab(event, 'signup')">Criar Conta</button>
+            </div>
+            <div class="tab-content">
+                <!-- Login Form -->
+                <div id="login" class="tab-pane active">
+                    <h1>Bem-vindo ao JCC</h1>
+                    <form id="login-form">
+                        <div class="input-box">
+                            <input type="text" id="login-username" required>
+                            <label for="login-username">Usuário</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="login-password" required>
+                            <label for="login-password">Senha</label>
+                        </div>
+                        <button type="submit" class="btn-login">Entrar</button>
+                    </form>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="signup" class="tab-pane">
+                    <h1>Criar Conta</h1>
+                    <form id="signup-form">
+                        <div class="input-box">
+                            <input type="text" id="signup-username" required>
+                            <label for="signup-username">Usuário</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" id="signup-password" required>
+                            <label for="signup-password">Senha</label>
+                        </div>
+                        <div class="input-box">
+                            <select id="account-type" required>
+                                <option value="user">Usuário Normal</option>
+                                <option value="admin">Administrador</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-login">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

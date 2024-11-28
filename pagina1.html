@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achas que sabes a Bíblia?</title>
+    <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+    <!-- Botão para sair -->
+    <a href="home.html">
+        <button id="admin-button" class="admin-btn">Sair</button>
+    </a>
+     
+    <!-- Página Inicial -->
+    <header id="homeScreen">
+        <h1>Achas que sabes a Bíblia?</h1>
+        <p>Teste os seus conhecimentos sobre a Bíblia e desafie-se!</p>
+        <button id="startQuizBtn" class="start-button">Iniciar Quiz</button>
+    </header>
+
+    <!-- Tela do Quiz -->
+    <div id="quizScreen" style="display: none;">
+        <div id="questionContainer">
+            <p id="questionText">Pergunta aqui</p>
+            <div id="answers">
+                <button class="answerBtn" onclick="checkAnswer(0)">Resposta 1</button>
+                <button class="answerBtn" onclick="checkAnswer(1)">Resposta 2</button>
+                <button class="answerBtn" onclick="checkAnswer(2)">Resposta 3</button>
+                <button class="answerBtn" onclick="checkAnswer(3)">Resposta 4</button>
+            </div>
+        </div>
+        <div id="progressBar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <!-- Tela de Resultados -->
+    <div id="resultsScreen" style="display: none;">
+        <h2>Seu Resultado:</h2>
+        <p id="score">Pontuação: 0/10</p>
+        <div id="feedback"></div>
+        <button id="restartBtn" class="restart-button">Recomeçar</button>
+    </div>
+
+    <script src="pagina1.js"></script>
+</body>
+</html>

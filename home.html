@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achas que sabes a Bíblia?</title>
+    <link rel="stylesheet" href="pagina.css">
+    <style>
+        /* Fundo e texto */
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); /* Gradiente bonito */
+            color: #ffffff; /* Texto branco */
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffe600; /* Amarelo vibrante */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Sombra escura */
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffffff; /* Branco puro */
+            background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+            padding: 10px 20px;
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra leve */
+            margin-top: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        h2:hover {
+            transform: translateY(-5px); /* Eleva levemente o texto ao passar o mouse */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+        }
+
+        /* Botões do modo de jogo */
+        .mode-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #28a745; /* Verde suave */
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .mode-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            background-color: #34c759; /* Verde mais vibrante */
+        }
+
+        /* Botão de saída */
+        #admin-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ffe600; /* Amarelo vibrante */
+            color: #121212; /* Preto */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #admin-button:hover {
+            background-color: #fff200; /* Amarelo mais claro */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">
+        <button id="admin-button" class="admin-btn">Sair</button>
+    </a>
+    <header id="homeScreen">
+        <h1>Quão bem conheces a Bíblia?</h1>
+        <h2>Escolha o modo de jogo e teste seu conhecimento bíblico!</h2>
+        
+        <a href="pagina1.html" class="mode-button">Modo Normal</a>
+        <a href="pagina.html" class="mode-button">Contra o Tempo</a>
+    </header>
+</body>
+</html>

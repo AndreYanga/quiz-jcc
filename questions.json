@@ -1,0 +1,102 @@
+[
+    {
+        "question": "Quem construiu a arca durante o dilúvio, segundo a Bíblia?",
+        "options": ["Moisés", "Noé", "Abraão", "Davi"],
+        "correct": 1
+    },
+    {
+        "question": "Qual é o primeiro livro da Bíblia?",
+        "options": ["Gênesis", "Êxodo", "Levítico", "Números"],
+        "correct": 0
+    },
+    {
+        "question": "Quantos discípulos Jesus tinha?",
+        "options": ["10", "11", "12", "13"],
+        "correct": 2
+    },
+    {
+        "question": "Qual é o maior mandamento ensinado por Jesus?",
+        "options": ["Amar a Deus sobre todas as coisas", "Não matar", "Guardar o sábado", "Não cobiçar"],
+        "correct": 0
+    },
+    {
+        "question": "Quem foi o primeiro homem criado por Deus?",
+        "options": ["Moisés", "Abraão", "Adão", "Elias"],
+        "correct": 2
+    },
+    {
+        "question": "Quem traiu Jesus por 30 moedas de prata?",
+        "options": ["Pedro", "Judas Iscariotes", "João", "Tomé"],
+        "correct": 1
+    },
+    {
+        "question": "Qual o nome da mãe de Jesus?",
+        "options": ["Maria Madalena", "Marta", "Maria", "Rebeca"],
+        "correct": 2
+    },
+    {
+        "question": "Quantos dias Deus levou para criar o mundo, segundo Gênesis?",
+        "options": ["5", "6", "7", "8"],
+        "correct": 1
+    },
+    {
+        "question": "Qual o nome do apóstolo que era conhecido como 'dúvida' por não acreditar na ressurreição de Jesus?",
+        "options": ["Pedro", "Tiago", "Tomé", "Judas"],
+        "correct": 2
+    },
+    {
+        "question": "Qual o livro bíblico que narra a criação do mundo?",
+        "options": ["Êxodo", "Gênesis", "Salmos", "Apocalipse"],
+        "correct": 1
+    },
+    {
+        "question": "Quem foi jogado na cova dos leões e sobreviveu?",
+        "options": ["Daniel", "José", "Ezequiel", "Jonas"],
+        "correct": 0
+    },
+    {
+        "question": "Qual o nome do mar que se abriu para Moisés e os israelitas atravessarem?",
+        "options": ["Mar Mediterrâneo", "Mar Morto", "Mar Vermelho", "Mar Negro"],
+        "correct": 2
+    },
+    {
+        "question": "Quem foi engolido por um grande peixe, segundo a Bíblia?",
+        "options": ["Jonas", "Pedro", "Paulo", "Elias"],
+        "correct": 0
+    },
+    {
+        "question": "Qual é o último livro da Bíblia?",
+        "options": ["Mateus", "Apocalipse", "Romanos", "Salmos"],
+        "correct": 1
+    },
+    {
+        "question": "Quem foi o primeiro mártir cristão?",
+        "options": ["Paulo", "Pedro", "Estevão", "Tiago"],
+        "correct": 2
+    },
+    {
+        "question": "Quantos livros tem a Bíblia (versão protestante)?",
+        "options": ["66", "73", "39", "27"],
+        "correct": 0
+    },
+    {
+        "question": "Quem liderou o povo de Israel na travessia do rio Jordão?",
+        "options": ["Moisés", "Josué", "Calebe", "Elias"],
+        "correct": 1
+    },
+    {
+        "question": "Qual era o nome original de Paulo antes de sua conversão?",
+        "options": ["Simão", "Saulo", "Pedro", "Ezequiel"],
+        "correct": 1
+    },
+    {
+        "question": "Quem recebeu os 10 mandamentos de Deus?",
+        "options": ["Abraão", "Noé", "Moisés", "Josué"],
+        "correct": 2
+    },
+    {
+        "question": "Quem escreveu a maioria das cartas no Novo Testamento?",
+        "options": ["Pedro", "João", "Paulo", "Lucas"],
+        "correct": 2
+    }
+]

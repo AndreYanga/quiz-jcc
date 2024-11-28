@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gestão de Perguntas</title>
+    <link rel="stylesheet" href="adm.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <div class="d-flex">
+        <div class="sidebar bg-dark text-white p-4">
+            <h2 class="text-center">Painel Admin</h2>
+            <nav class="nav flex-column">
+                <a href="#home" class="nav-link text-white" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a>
+                <a href="#addQuestion" class="nav-link text-white" onclick="showSection('addQuestion')"><i class="fas fa-plus-circle"></i> Adicionar Pergunta</a>
+                <a href="#editQuestion" class="nav-link text-white" onclick="showSection('editQuestion')"><i class="fas fa-edit"></i> Editar Pergunta</a>
+                <a href="#deleteQuestion" class="nav-link text-white" onclick="showSection('deleteQuestion')"><i class="fas fa-trash-alt"></i> Excluir Pergunta</a>
+                <a href="#viewQuestions" class="nav-link text-white" onclick="showSection('viewQuestions')"><i class="fas fa-list-ul"></i> Consultar Perguntas</a>
+                <a href="index.html" class="nav-link text-white" onclick="logoutUser()"><i class="fas fa-sign-out-alt"></i> Sair</a>
+            </nav>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="main-content flex-grow-1 p-4">
+            <header class="mb-4">
+                <h1 class="text-center text-white">Painel de Administração</h1>
+            </header>
+
+            <!-- Seção Home (Página Inicial) -->
+            <section id="home" class="section-content">
+                <div class="home-container text-center p-4">
+                    <h2>Bem-vindo ao Painel de Administração</h2>
+                    <p>Este painel permite gerenciar as perguntas do quiz de forma fácil e eficiente.</p>
+                    <div class="alert alert-info">
+                        <strong>Dica:</strong> Para adicionar uma nova pergunta, vá até a seção <b>Adicionar Pergunta</b> no menu à esquerda.
+                    </div>
+
+                    <!-- Cards Informativos -->
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card text-white bg-primary shadow">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-question-circle fa-3x mb-3"></i>
+                                    <h5 class="card-title">Gerenciar Perguntas</h5>
+                                    <p class="card-text">Adicione, edite ou remova perguntas do seu quiz.</p>
+                                    <a href="#addQuestion" class="btn btn-light" onclick="showSection('addQuestion')">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card text-white bg-success shadow">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-search fa-3x mb-3"></i>
+                                    <h5 class="card-title">Consultar Perguntas</h5>
+                                    <p class="card-text">Veja todas as perguntas e respostas do quiz.</p>
+                                    <a href="#viewQuestions" class="btn btn-light" onclick="showSection('viewQuestions')">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card text-white bg-info shadow">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-gamepad fa-3x mb-3"></i>
+                                    <h5 class="card-title">Informações do Jogo</h5>
+                                    <p class="card-text">Descubra mais sobre o jogo e suas regras.</p>
+                                    <a href="javascript:void(0)" class="btn btn-light" onclick="openRankingModal()">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4">
+                            <div class="card text-white bg-danger shadow">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-trash-alt fa-3x mb-3"></i>
+                                    <h5 class="card-title">Excluir Perguntas</h5>
+                                    <p class="card-text">Remova perguntas que não são mais necessárias.</p>
+                                    <a href="#deleteQuestion" class="btn btn-light" onclick="showSection('deleteQuestion')">Ver mais</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Outras Seções (Adicionar Pergunta, Editar, etc.) -->
+            <section id="addQuestion" class="section-content">
+                <h2 class="text-primary">Adicionar Pergunta</h2>
+                <div class="form-container p-4 bg-white shadow rounded">
+                    <div class="form-group">
+                        <input type="text" id="newQuestion" class="form-control" placeholder="Digite a nova pergunta">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="newOption1" class="form-control" placeholder="Opção 1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="newOption2" class="form-control" placeholder="Opção 2">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="newOption3" class="form-control" placeholder="Opção 3">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="newOption4" class="form-control" placeholder="Opção 4">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="correctOption" class="form-control" placeholder="Número da opção correta (1-4)" min="1" max="4">
+                    </div>
+                    <button id="addQuestionBtn" class="btn btn-primary btn-block">Adicionar Pergunta</button>
+                </div>
+            </section>
+
+             <!-- Seção Consultar Perguntas -->
+             <section id="viewQuestions" class="section-content">
+                <h2 class="text-primary">Consultar Perguntas</h2>
+                <div id="questionList" class="bg-white p-4 rounded shadow">
+                    <p><i>Não há perguntas cadastradas.</i></p> 
+                </div>
+            </section>
+            <!-- Seção Editar Pergunta -->
+            <section id="editQuestion" class="section-content">
+                <h2 class="text-primary">Editar Pergunta</h2>
+                <div id="editQuestionList" class="bg-white p-4 rounded shadow">
+                    <p><i>Carregando perguntas...</i></p>
+                </div>
+            </section>
+
+            <!-- Seção Excluir Pergunta -->
+            <section id="deleteQuestion" class="section-content">
+                <h2 class="text-primary">Excluir Pergunta</h2>
+                <div id="deleteQuestionList" class="bg-white p-4 rounded shadow">
+                    <p><i>Carregando perguntas...</i></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalContent"></p>
+                    <!-- Ranking será carregado aqui -->
+                    <div id="rankingContainer" style="display: none;">
+                        <h5>Ranking Atual:</h5>
+                        <ul id="rankingList">
+                            <!-- Ranking será carregado aqui -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="adm.js"></script>
+</body>
+</html>

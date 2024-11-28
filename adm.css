@@ -1,0 +1,66 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cor de fundo da barra lateral */
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+}
+
+/* Área de conteúdo */
+.main-content {
+    flex-grow: 1;
+    background-color: #f4f4f4;
+}
+
+/* Cards de Navegação */
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards nas telas menores */
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Estilo da seção home */
+.home-container {
+    margin-top: 20px;
+}
+
+/* Estilo dos formulários */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+section {
+    display: none;
+}
+
+section:target {
+    display: block;
+}
