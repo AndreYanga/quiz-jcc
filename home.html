@@ -88,9 +88,24 @@
             background-color: #fff200; /* Amarelo mais claro */
             transform: scale(1.05);
         }
+
+        /* Logo no canto superior esquerdo */
+        .logo-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo {
+            max-width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+            height: auto;
+        }
     </style>
 </head>
 <body>
+    <div class="logo-container">
+        <img src="jcc_logo1.png" alt="Logo JCC" class="logo">
+    </div>
     <a href="index.html">
         <button id="admin-button" class="admin-btn">Sair</button>
     </a>

@@ -11,6 +11,18 @@ body {
     flex-direction: column;
 }
 
+/* Logo no canto superior esquerdo */
+.logo-container {
+    position: fixed;
+    top: 2px;
+    left: 20px;
+}
+
+.logo {
+    max-width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
 /* Cabeçalho da Página Inicial */
 header {
     text-align: center;

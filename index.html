@@ -9,6 +9,10 @@
 </head>
 <body>
     <div class="login-container">
+        <!-- Adicionando a logo após o login-container -->
+        <div class="logo-container">
+            <img src="jcc_logo1.png" alt="Logo JCC" class="logo">
+        </div>
         <div class="login-box">
             <div class="tab-header">
                 <button class="tab-link active" onclick="openTab(event, 'login')">Entrar</button>
@@ -46,7 +50,6 @@
                         <div class="input-box">
                             <select id="account-type" required>
                                 <option value="user">Usuário Normal</option>
-                              <!--   <option value="admin">Administrador</option> -->
                             </select>
                         </div>
                         <button type="submit" class="btn-login">Cadastrar</button>
